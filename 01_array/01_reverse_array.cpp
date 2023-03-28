@@ -34,3 +34,18 @@ void rvereseArray(int arr[], int start, int end)
     // Recursive Function calling
     rvereseArray(arr, start + 1, end - 1);
 }
+
+//reversing a string
+
+void reverseArray(string &str,int start,int end){
+    if(start>=end) return;
+    
+    swap(str[start],str[end]);
+    reverseArray(str,start+1,end-1);  
+}
+
+string reverseWord(string str){
+      int start=0,end=str.length()-1;
+      reverseArray(str,start,end);  
+      return str;
+}
